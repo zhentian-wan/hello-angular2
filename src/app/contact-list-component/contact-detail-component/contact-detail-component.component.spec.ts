@@ -12,9 +12,3 @@ import {
 
 import { ContactDetailComponent } from './contact-detail-component.component';
 
-describe('Component: ContactDetailComponent', () => {
-  it('should create an instance', () => {
-    let component = new ContactDetailComponent();
-    expect(component).toBeTruthy();
-  });
-});

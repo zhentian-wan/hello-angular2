@@ -1,4 +1,7 @@
-<p>
-  contact-list-component works!
-  <a routerLink="/contacts/3">Details</a>
-</p>
+<h2>Contacts</h2>
+<ul>
+  <li *ngFor="let contact of contacts">
+    <a [routerLink]="['/contacts', contact.id]">{{contact.name}}</a> |
+    <a routerLink="/contacts/{{contact.id}}">{{contact.name}}</a>
+  </li>
+</ul>

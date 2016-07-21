@@ -9,12 +9,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ContactDetailComponent implements OnInit {
 
-  message: string;
+  id: number;
   constructor(private route: ActivatedRoute) {
-    this.message = this.route.snapshot.params['id'];
   }
 
   ngOnInit() {
+    this.route.params
+      .map(params => params['id'])
+      .subscribe((id) => {
+        this.id = id;
+      });
   }
 
 }
